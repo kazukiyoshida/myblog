@@ -4,6 +4,8 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 
+def aboutme(request):
+    return render(request, 'blog/aboutme.html', {})
 
 def post_list(request):
     posts = Post.objects.filter()
